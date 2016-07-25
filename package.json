@@ -1,0 +1,41 @@
+{
+  "name": "suicide-team-landing",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "heroku-postbuild": "gulp build"
+  },
+  "engines": {
+    "node": "4.4.7",
+    "npm": "2.15.8"
+  },
+  "author": {
+    "name": "Stav Geffen",
+    "email": "stavgeffen@gmail.com",
+    "url": "http://www.stav.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/panstav/suicide-team-landing.git"
+  },
+  "bugs": {
+    "url": "https://github.com/panstav/suicide-team-landing/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer": "6.3.7",
+    "compression": "1.6.2",
+    "express": "4.14.0",
+    "gulp": "3.9.1",
+    "gulp-jade": "1.1.0",
+    "gulp-load-plugins": "1.2.4",
+    "gulp-postcss": "6.1.1",
+    "gulp-pug": "3.0.3",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.2",
+    "gulp-sequence": "0.4.5",
+    "gulp-util": "3.0.7"
+  }
+}
