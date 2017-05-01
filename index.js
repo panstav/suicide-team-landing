@@ -12,7 +12,7 @@ server.use(compression());
 server.get('/', (req, res) => res.sendFile('index.html', { root: 'public' }));
 
 // redirect any path with '.html' suffix to homepage
-server.get(/\.html/, (req, res) => res.redirect(302, '/'));
+server.get(/\.html/, (req, res) => res.redirect(308, '/'));
 
 // serve static files
 server.use(express.static('public'));
