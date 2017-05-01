@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 
+const packageJson = require('./package');
 const isProduction = process.env.NODE_ENV === 'production';
 const versionHash = isProduction ? `.${ packageJson.version }.min` : '';
 

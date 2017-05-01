@@ -1,6 +1,8 @@
 const express = require('express');
 const compression = require('compression');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 const server = express();
 
 // Heroku fix
@@ -15,7 +17,7 @@ server.get('/', (req, res) => res.sendFile('index.html', { root: 'public' }));
 server.get(/\.html/, (req, res) => res.redirect(308, '/'));
 
 // serve static files
-server.use(express.static('public'));
+server.use(express.static('public', { maxAge: isProduction ? 1000*60*60*24*365 : 0 }));
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
